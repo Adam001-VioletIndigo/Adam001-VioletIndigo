@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商务合作与联系</title>
+    <style>
+        @font-face {
+            font-family: 'Main'; 
+            src: url('fonts/字魂59号-创粗黑.ttf') format('truetype'); 
+        }
+        @font-face {
+            font-family: 'DYH'; 
+            src: url('fonts/SmileySans-Oblique.ttf') format('truetype'); 
+        }
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background:url('') no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #333; /* 添加头部背景色 */
+            color: #fff; /* 头部文本颜色 */
+            padding: 20px;
+            text-align: center; /* 文本居中对齐 */
+        }
+        
+        h1 {
+            margin: 0; /* 移除h1的默认外边距 */
+        }
+        .back-to-home-btn {
+            position: absolute; /* 绝对定位 */
+            top: 20px; /* 距离顶部20px */
+            left: 20px; /* 距离左边20px */
+            padding: 10px 20px; /* 内边距 */
+            background-color: #333; /* 背景色 */
+            color: #fff; /* 文本颜色 */
+            border: none; /* 无边框 */
+            border-radius: 5px; /* 圆角 */
+            cursor: pointer; /* 鼠标悬停时显示小手图标 */
+            text-decoration: none; /* 去除下划线 */
+            display: inline-block; /* 作为内联块元素显示 */
+            z-index: 100; /* 确保按钮在其他元素之上 */
+        }
+        main {
+            padding: 20px;
+        }
+        
+        .about-content {
+            display: flex; /* 使用Flexbox布局 */
+            flex-direction: column; /* 垂直方向 */
+            align-items: center; /* 子元素在交叉轴上居中 */
+            margin-top: 40px; /* 增加间距 */
+            text-align: center; /* 文本居中对齐 */
+        }
+        
+        .about-content img {
+            margin-bottom: 20px; /* 图片下方增加间距 */
+        }
+        
+        .about-info {
+            display: flex; /* 使用Flexbox布局 */
+            flex-direction: column; /* 垂直方向 */
+            align-items: center; /* 子元素在交叉轴上居中 */
+        }
+        
+        .about-info p {
+            margin: 10px 0; /* 增加段落之间的间距 */
+        }
+        
+        footer {
+            background-color: #333; /* 底部背景色 */
+            color: #fff; /* 底部文本颜色 */
+            padding: 20px;
+            text-align: center; /* 文本居中对齐 */
+            position: fixed; /* 固定在底部 */
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* 给header和footer添加毛玻璃效果 */
+        header, footer {
+            /* 使用backdrop-filter属性添加模糊效果，但请注意，这在某些浏览器上可能不受支持 */
+            backdrop-filter: blur(10px);
+            /* 添加背景色以增加在不支持backdrop-filter的浏览器上的可读性 */
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* 由于footer是固定的，我们需要给body添加一个内边距来防止内容被footer覆盖 */
+        body {
+            padding-bottom: 60px; /* 根据footer的高度调整 */
+        }
+        
+        h1{
+            font-family:'DYH',Serif;
+            font-size: 30px;
+        }
+        
+        h3{
+            font-family:'Main',Serif;
+            font-size: 20px;
+        }
+        a{
+            color:#5927BA;
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-to-home-btn">返回</a>
+        <h1>商务合作与联系</h1>
+        
+    </header>
+
+    <main>
+        <div class="about-content">
+            <!--<img src="/img/i.png" alt="软件图标" width="200" height="200">!-->
+            <div class="about-info">
+                <h2>合作与正式联系方式</h2>
+                <p>电子邮箱:<a href="mailto:Adam001_@outlook.com">Adam001_@outlook.com</a></p>
+                <h3>非商务信息或联系通知请勿向此邮件地址发送</h3>
+                <p>QQ:349460484</p>
+                <h3>如商谈合作等事项请发送时写有您的个人或企业名称与合作内容，谢谢</h3>
+                
+            </div>
+        </div>
+    </main>
+
+    
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/icon.png">
+    <title>Adam001的小站</title>
+    <style>
+        @font-face {
+            font-family: 'Main'; 
+            src: url('fonts/字魂59号-创粗黑.ttf') format('truetype'); 
+        }
+        @font-face {
+            font-family: 'DYH'; 
+            src: url('fonts/SmileySans-Oblique.ttf') format('truetype'); 
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; 
+            padding: 0;
+            background-color: #333;
+            /*background: url('/img/LOGO.png'); 
+            background-position: center center;
+            background-size: contain;*/
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 1%;
+            position: fixed;
+            text-align: center;
+            width: 100%;
+            top:0%;
+            height: 8%;
+        }
+         header h1 {
+            font-family:'DYH',Serif;
+            margin: 0;
+            color:#f5f5f5;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: auto;
+            text-align: center;
+            display: flex;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: #5927BA;
+            border: 1px solid #5927BA;
+        }
+
+        main {
+            padding: 20px; /* 添加内边距 */
+            margin-top: 20px; /* 与头部或导航栏保持一定的距离 */
+        }
+        .container_1:before {
+            content: "";
+            display: block;
+            height: 60px; /* 假设header的高度是60px */
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.);
+            margin-top:1%;
+            
+        }
+        .glass-effect {
+            position: relative;
+            overflow: hidden; /* 确保伪元素不会超出section的边界 */
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(10px);
+            border-radius: 10px; /* 可根据需要调整圆角 */
+        }
+ 
+        .glass-effect::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 10, 10, 0.5); /* 背景颜色可以根据需要调整 */
+            backdrop-filter: blur(10px);
+            border-radius: inherit;
+            z-index: 1; /* 设置伪元素的z-index */
+        }
+        .section-content {
+            position: relative; /* 确保内容可以定位，‌并且具有z-index属性 */
+            z-index: 2; /* 设置内容的z-index高于伪元素 */
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 0%;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a{
+            color:#fff;
+            font-size: 14px;
+        }
+        footer p {
+            font-size: 14px;
+            text-align: left;
+            
+        }
+        .logo {
+            float: left; /* LOGO浮动到左边 */
+            margin-right: 10px; /* 图文间隔 */
+  }
+        p{
+            color:#f5f5f5;
+            font-family:'Main',Serif;
+            font-size: 24px;
+            line-height: 26px;
+        }
+        h1{
+            color:#f5f5f5;
+            font-family:'DYH',Serif;
+            font-size: 30px;
+        }
+        h2{
+            color:#f5f5f5;
+            font-family:'DYH',Serif;
+            font-size: 30px;
+        }
+        h3{
+            color:#f5f5f5;
+            font-family:'Main',Serif;
+            font-size: 20px;
+        }
+        a{
+            color:#00f6ff;
+        }
+        
+        .download-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #333;
+        border: none;
+        border-radius: 4px;    
+        cursor: pointer;
+        text-decoration: none; /* 去除下划线 */
+        }
+        .download-btn:hover {
+            background-color: #5927BA;
+        }
+        .card {
+            border: 1px solid #ccc;
+            background-color: #111111;
+            border-radius: 15px;
+            padding: 1%;
+            margin: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s; /*过渡效果*/
+        }
+            
+        .card:hover {
+            transform: scale(1.05); /*悬停放大*/
+        }
+        .container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            overflow: hidden; /* 防止悬浮图片超出容器时溢出 */
+        }
+
+        .image_0 {
+            width: 100%;
+            height: auto;
+            display: block; /* 移除图片下方的默认空白 */
+        }
+
+        .overlay_1{
+            position: absolute;
+            top: 10px; 
+            left: 50%; 
+            width: 100%; /* 或者你需要的宽度 */
+            height: auto; /* 保持图片比例 */
+        }
+        
+        
+        
+    </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.body.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+            // alert('右键菜单已被禁用！');
+        }, false);
+    });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+    const card = document.querySelector('.card');
+
+    if (card) {
+        card.addEventListener('click', function() {
+            const url = card.getAttribute('data-url');
+            if (url) {
+                window.location.href = url;
+            }
+        });
+    } else {
+        console.error('未找到匹配的 .card 元素。');
+    }
+});
+   
+    
+</script>
+
+</head>
+<body>
+    <header>
+        
+        <!--<a href="#home"><img class="logo" src="img\001.jpg" id="001_TX" width="60" height="60"></a>!-->
+        <h1>Website Of Adam001</h1>
+        <nav>
+            <a href="#home">主页</a>
+            <!--<a href="#helps">使用帮助</a>!-->
+            <a href="#intro_001">简介</a>
+            <a href="#COMMUNICATION">社交</a>
+            <!--<a href="cooperation.html">合作与联系</a>!-->
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="section-content">
+                
+            </div>
+        </section>
+        
+        <section id="intro_001" class="glass-effect">
+            <div class="section-content">
+                <h1>简介</h1>
+                <img class="logo" src="img\001.jpg" id="001_TX-intro" width="114" height="114">
+                <h2>Adam001</h2> 
+                <p></p>
+            </div>
+        </section>
+         
+
+        
+        <section id="COMMUNICATION" class="glass-effect">
+            <div class="section-content">
+                <h1>交流</h1> 
+                <p>Adam001个人QQ:<a href="https://qm.qq.com/q/VoKXMPJdSI"target="_blank">点击联系我吧</a>
+                </p>
+                <h1>账号</h1> 
+                <p>
+                    <a href="https://space.bilibili.com/692369412"target="_blank"><img class="logo" src="img\b.png" id="001_TX" width="60"></a>
+                </p>
+                <h3>
+                    <br>注:除以上社交账号外,非Adam001本人持有或未使用,不会发布有关信息，不要轻信以免上当受骗
+                </h3>
+            </div>
+        </section>
+        
+        <!--<section id="download">
+            <h2>下载</h2>
+            <p>获取软件的最新版本：</p>
+            <div class="card" data-url="">
+                <h3>Android</h3>
+                <p>点击下载</p>
+            </div>
+            <p><br>更多客户端支持敬请期待</p>
+        </section>!-->
+        
+    </main>
+    
+    <footer>
+        <p>© 2024-2026 Adam001&ensp;&ensp;&ensp;&ensp;<a href="http://search.adam001.top"target="_blank">001网址导航</a></p>
+        
+    </footer>
+</body>
+
+</html>
