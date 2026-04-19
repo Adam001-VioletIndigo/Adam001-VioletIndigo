@@ -42,7 +42,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    padding: 20px 40px;
+    padding: 16px 32px;
     background: rgba(10, 14, 39, 0.8);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -67,7 +67,7 @@ header h1 {
     font-size: 28px;
     margin: 0;
     line-height: 1.2;
-    background: linear-gradient(135deg, #00f6ff, #5927ba);
+    background: linear-gradient(135deg, #00f6ff, #4925ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -77,7 +77,7 @@ header .subtitle {
     font-size: 12px;
     margin: 0;
     line-height: 1.2;
-    background: linear-gradient(135deg, #00f6ff, #5927ba);
+    background: linear-gradient(135deg, #00f6ff, #4925ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -107,7 +107,7 @@ nav a::before {
     left: 50%;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #00f6ff, #5927ba);
+    background: linear-gradient(90deg,#00f6ff, #4925ff);
     transform: translateX(-50%);
     transition: width 0.3s ease;
 }

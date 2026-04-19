@@ -40,7 +40,7 @@ header h1 {
     font-family: 'DYH', serif;
     font-size: 28px;
     margin: 0;
-    background: linear-gradient(135deg, #00f6ff, #5927ba);
+    background: linear-gradient(135deg, #00f6ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
