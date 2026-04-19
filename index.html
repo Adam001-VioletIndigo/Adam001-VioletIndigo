@@ -12,6 +12,13 @@
     <title>Adam001的站点</title>
 </head>
 <body id="top">
+    <div id="loader" class="loader-container">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p class="loader-text">加载中...</p>
+        </div>
+    </div>
+
     <header>
         <div class="header-content">
             <a href="index.html#top" class="header-title">
@@ -64,6 +71,16 @@
     </footer>
 
     <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            if (loader) {
+                loader.classList.add('loader-hidden');
+                setTimeout(function() {
+                    loader.style.display = 'none';
+                }, 500);
+            }
+        });
+
         document.addEventListener('DOMContentLoaded', function() {
             document.body.addEventListener('contextmenu', function(e) {
                 e.preventDefault();
