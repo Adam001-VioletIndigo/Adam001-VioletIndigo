@@ -1,0 +1,203 @@
+/* Conversion Tool Styles */
+
+/* Upload container */
+.upload-container {
+    margin-top: 30px;
+}
+
+.fileinput-button {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(135deg, #00f6ff, #5927ba);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 246, 255, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.fileinput-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 246, 255, 0.5);
+}
+
+.fileinput-button input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Result table */
+.result-table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.result-table tr {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.result-table tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 246, 255, 0.2);
+}
+
+.result-table td {
+    padding: 15px;
+    border: none;
+}
+
+.result-table td:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.result-table td:last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.result-table .td1 canvas {
+    border-radius: 8px;
+}
+
+.result-table .td2 audio {
+    width: 100%;
+    max-width: 300px;
+}
+
+.result-table .td3 a {
+    color: #00f6ff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.result-table .td3 a:hover {
+    color: #5927ba;
+    text-shadow: 0 0 15px rgba(0, 246, 255, 0.6);
+}
+
+/* Buttons container */
+.buttons-container {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+/* Download button style */
+.btn-success.download-single {
+	padding: 8px 16px;
+	font-size: 14px;
+	color: #fff;
+	background: linear-gradient(135deg, #00f6ff, #5927ba);
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.btn-success.download-single:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 15px rgba(0, 246, 255, 0.4);
+}
+
+/* File name title style */
+.file-name-title {
+	color: #e0e0e0;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+/* Delete button with red style */
+.btn-danger.delete {
+	padding: 8px 16px;
+	font-size: 14px;
+	color: #fff;
+	background: linear-gradient(135deg, #ff4757, #ff6b81);
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.btn-danger.delete:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+}
+
+/* Download all buttons container */
+#download-all-btn-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+#zip-status {
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* Responsive styles for conversion page */
+@media (max-width: 768px) {
+    .upload-container {
+        margin-top: 20px;
+    }
+
+    .fileinput-button {
+        padding: 12px 25px;
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .result-table {
+        font-size: 14px;
+    }
+
+    .result-table td {
+        padding: 10px;
+    }
+
+    .result-table .td2 audio {
+        max-width: 200px;
+    }
+
+    #download-all-btn-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #download-all-btn-container .cta-button {
+        width: 100%;
+    }
+    
+    .buttons-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .btn-success.download-single,
+    .btn-danger.delete {
+        width: 100%;
+    }
+}

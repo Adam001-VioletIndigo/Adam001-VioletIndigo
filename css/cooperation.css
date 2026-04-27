@@ -16,7 +16,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: linear-gradient(135deg, #0a0e27, #1a1f3a 50%, #0f1535);
+    background: linear-gradient(135deg, #0a0e27, #0a0840 50%, #151045);
     color: #e0e0e0;
     min-height: 100vh;
     line-height: 1.6;
@@ -168,27 +168,91 @@ footer a:hover {
     text-shadow: 0 0 10px rgba(0, 246, 255, 0.5);
 }
 
+.cooperation-page {
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.cooperation-page .back-to-home-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: 500;
+    color: #00f6ff;
+    text-decoration: none;
+    background: rgba(0, 246, 255, 0.1);
+    border: 1px solid rgba(0, 246, 255, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cooperation-page .back-to-home-btn:hover {
+    background: rgba(0, 246, 255, 0.2);
+    border-color: #00f6ff;
+    box-shadow: 0 0 15px rgba(0, 246, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.cooperation-page .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.cooperation-page .about-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cooperation-page .about-info p {
+    margin: 15px 0;
+    font-size: 16px;
+    color: #c0c0c0;
+}
+
+.cooperation-page h2 {
+    font-family: 'DYH', serif;
+    font-size: 28px;
+    color: #fff;
+    margin: 20px 0 15px;
+}
+
+.cooperation-page h3 {
+    font-family: 'Main', serif;
+    font-size: 18px;
+    color: #999;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
 @media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
+    .cooperation-page {
+        padding-top: 100px;
+        padding-bottom: 20px;
     }
 
-    header h1 {
-        font-size: 24px;
-    }
-
-    .back-to-home-btn {
+    .cooperation-page .back-to-home-btn {
         top: 15px;
         left: 15px;
         padding: 8px 15px;
         font-size: 14px;
     }
 
-    main {
-        padding: 100px 20px 20px;
-    }
-
-    .about-content {
+    .cooperation-page .about-content {
         padding: 25px;
     }
 }

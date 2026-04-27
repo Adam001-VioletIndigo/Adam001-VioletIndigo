@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Adam001的站点，极致创新，技术无限！-转换工具">
+    <meta property="og:title" content="Adam001的站点-转换工具">
+    <meta property="og:description" content="Adam001的站点，极致创新，技术无限！">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="/img/icon_new.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/conversion.css">
+    <title>Adam001的站点-转换工具</title>
+</head>
+<body id="top">
+    <div id="loader" class="loader-container">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p class="loader-text">加载中...</p>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <a href="index.html#top" class="header-title">
+                <h1>Website Of Adam001</h1>
+                <p class="subtitle">极致创新，技术无限！</p>
+            </a>
+            <nav>
+                <a href="index.html#home">主页</a>
+                <a href="#upload-section">上传转换</a>
+                <a href="cooperation.html">合作联系</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="upload-section" class="hero-section">
+            <div class="section-content">
+                <h1>音乐缓存文件格式转换</h1>
+                <p>NCM/QMC/KGM等缓存文件转换为FLAC/MP3</p>
+                <div class="upload-container">
+                    <span class="btn btn-primary fileinput-button">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span class="fileinput-btn-span">上传文件</span>
+                        <input id="upload" type="file" name="files[]" accept=".ncm,.kgm,.uc,.kwm,.xm,.qmc3,.qmc2,.qmc0,.qmcflac,.qmcogg,.mp3,.flac,.m4a,.ogg,.tm0,.tm3,.tkm,.mggl,.mflac,.mflac0,.mgg,.mgg0,.mgg1,.bkcmp3,.bkcm4a,.bkcflac,.bkcwav,.bkcape,.bkcogg,.bkcwma,.tm2,.tm6,.cache,.vpr,.kgma,.kgm.flac" multiple="">
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section id="result-section" style="display: none;">
+            <div class="section-content">
+                <h1>转换完成！</h1>
+                <div id="download-all-btn-container" style="visibility: hidden;">
+                    <button onclick="dlAll()" type="button" class="cta-button">
+                        <i class="glyphicon glyphicon-download"></i>
+                        <span>一键下载</span>
+                    </button>
+                    <button onclick="dlZip()" type="button" class="cta-button">
+                        <i class="glyphicon glyphicon-download"></i>
+                        <span>打包下载</span>
+                    </button>
+                    <button onclick="clearAll()" type="button" class="cta-button" style="background: linear-gradient(135deg, #ff4757, #ff6b81);">
+                        <i class="glyphicon glyphicon-trash"></i>
+                        <span>清空</span>
+                    </button>
+                    <div id="zip-status"></div>
+                </div>
+                <table id="res-table" class="result-table"></table>
+            </div>
+        </section>
+
+        <section id="tools-info">
+            <div class="section-content">
+                <h1>功能说明</h1>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">🔒</div>
+                        <h3>本地转换</h3>
+                        <p>本地处理，隐私安全</p>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">⚡</div>
+                        <h3>快速高效</h3>
+                        <p>即时转换，效率提升</p>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">🎵</div>
+                        <h3>多格式支持</h3>
+                        <p>支持主流音乐缓存格式转换</p>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">📦</div>
+                        <h3>批量处理</h3>
+                        <p>支持多文件同时转换</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024-2026 Adam001</p>
+    </footer>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/decrypt.js"></script>
+    <script src="js/Post-Processing.js"></script>
+    <script src="js/converter.js"></script>
+</body>
+</html>
